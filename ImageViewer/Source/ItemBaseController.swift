@@ -162,6 +162,9 @@ class ItemBaseController<T: UIView>: UIViewController, ItemController, UIGesture
             if let image = image {
 
                 self?.itemView.image = image
+                self?.itemView.isAccessibilityElement = image.isAccessibilityElement
+                self?.itemView.accessibilityLabel = image.accessibilityLabel
+                self?.itemView.accessibilityTraits = image.accessibilityTraits
 
                 self?.view.setNeedsLayout()
                 self?.view.layoutIfNeeded()
